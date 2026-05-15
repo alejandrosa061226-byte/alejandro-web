@@ -221,7 +221,7 @@ html{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 8rem 2px;
+    padding: 6rem 2px;
     position: relative;
     z-index: 10;
     transition: width 0.5s;
@@ -230,7 +230,8 @@ html{
 #menu nav{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
+    overflow: hidden;
 
     ul{
     display: flex;
@@ -252,7 +253,10 @@ html{
     padding: 10px;
     border-radius: 50%;
     aspect-ratio: 1;
-    
+
+    :hover{
+        cursor: pointer;
+    }
 }
 
 .icon{
@@ -260,6 +264,9 @@ html{
     display: flex;
     align-items: center;
     filter: drop-shadow(0 0 5px #00000038);
+    position: relative;
+    border-radius: 100px 0 0 100px;
+    transition: background-color 0.1s;
 
     a{
         width: 100%;
@@ -268,18 +275,50 @@ html{
         padding: 10px;
         text-decoration: none;
         border-radius: 100px 0 0 100px;
-        transition: background-color 0.1ms;
+        color: inherit;
+    }
+}
+
+.icon:is(:hover, :active){
+    background-color: #4888ee;
+    
+    a{
+        color: #fff;
     }
 
-    a:is(:hover, :active){
-        background-color: #4888ee;
-        color: #fff;
-
-        i, span{
-            transition: color 0.1ms;
+    i, span{
+            transition: color 0.1s;
             color: #fff;
         }
-    }
+}
+
+.icon::after, .icon::before{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    right: 0px;
+    transition: box-shadow 0.1s;
+}
+
+.icon::after{
+    top: -10px;
+    box-shadow: 5px 5px 0 5px transparent;
+    border-bottom-right-radius: 25px;
+}
+
+.icon::before{
+    bottom: -10px;
+    box-shadow: 5px -5px 0 5px transparent;
+    border-top-right-radius: 25px;
+}
+
+.icon:is(:hover, :active)::after{
+    box-shadow: 5px 5px 0 5px #4888ee;
+}
+.icon:is(:hover, :active)::before{
+    box-shadow: 5px -5px 0 5px #4888ee;
 }
 
 i{
@@ -298,6 +337,8 @@ span{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 10px 0;
+    overflow: hidden;
 }
 
 .menu__login > img{
@@ -335,9 +376,8 @@ span{
         i:first-child{
             display: none;
         }
+    }
 }
-}
-
 
 /* ----------------------- Main ------------------------ */
 
@@ -556,6 +596,119 @@ span{
 
     h2{
         font-size: 2rem;
+    }
+}
+
+
+/* ----------------------- contact ------------------------ */
+
+#contact-father{
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    z-index: -100;
+    display: flex;
+    border: none;
+}
+
+#contact{
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(#232e48, #4888ee);
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 50px 2px #4888ee66;
+    top: 0;
+}
+
+#checkbox2{
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+}
+
+#checkbox2:checked ~ #contact-father{
+    z-index: 200;
+    opacity: 1;
+}
+
+.contact-fieldset{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 10px 2rem;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.contact-legend{
+    color: #fff;
+    font-size: 3rem;
+
+}
+
+.contact-lab{
+    display: block;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    font-size: 1.5rem;
+    width: 100%;
+    grid-column: span 2;
+
+    input, textarea, select{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        width: 100%;
+        min-height: 4rem;
+        margin-top: 5px;
+        border: 2px solid #0003;
+        border-radius: 5px;
+    }
+
+    option{
+        background-color: #fff;
+    }
+
+    textarea{
+        resize: none;
+    }
+}
+
+.--span{
+    grid-column: span 1;
+}
+
+.contact-cancel{
+    justify-self: end;
+    padding: 8px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.contact-button{
+    font-size: 1.5rem;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    justify-self: start;
+    background-color: #fff;
+}
+
+.contact-cancel:is(:hover,:active), .contact-button:is(:hover,:active){
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 550px){
+    .--span{
+        grid-column: span 2;
     }
 }
 
