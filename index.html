@@ -132,6 +132,39 @@
             <h2><strong>Alejandro Santos Aguilar</strong> 2026</h2>
             
         </footer>
+
+    <input type="checkbox" id="checkbox2">
+    <dialog open id="contact-father">
+        <form id="contact">
+            
+            <fieldset class="contact-fieldset">
+                <legend class="contact-legend">Contact</legend>
+                <label class="contact-lab --span">nombre:
+                    <input type="text" name="name" placeholder="Peres" class="contact-input" required>
+                </label>
+                <label class="contact-lab --span">apellido:
+                    <input type="text" name="last-name" placeholder="Peres" class="contact-input" required>
+                </label>
+                <label class="contact-lab">email:
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com" class="contact-input" required>
+                </label>
+                <label class="contact-lab">phone number:
+                    <input type="number" name="email" placeholder="+53 12345678" class="contact-input" required>
+                </label>
+                <label class="contact-lab">mode:
+                    <select name="mode">
+                        <option value="WA">WhatsApp</option>
+                        <option value="email">email</option>
+                    </select>
+                </label>
+                <label class="contact-lab">mensaje:
+                    <textarea name="message" rows="5" placeholder="Your message..."></textarea>
+                </label>
+                <label for="checkbox2" class="contact-cancel">Cancel</label>
+                <input type="submit" value="Enviar" class="contact-button">
+            </fieldset>
+        </form>
+    </dialog>
         
     </div>
     
