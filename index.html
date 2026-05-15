@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+</head>
+<body>
+    
+    <header id="bar">
+        <input type="checkbox" id="checkbox1">
+        <div class="bar__logo">            
+            <picture>
+                <source srcset="./multimedia/logo2.png" alt="Foto del logo">
+                <img src="https://pin.it/1ef0AAq2I" alt="Foto del logo">
+            </picture>
+        </div>
+
+        
+        <nav class="bar__options">
+            <ul class="bar__option__conteiner">
+                <li><a href="#footer">About</a></li>
+                <li><a href="#main">Profile</a></li>
+                <li><label for="checkbox2">Contact</label></li>
+            </ul>
+            <div class="button">
+                <label for="checkbox1" class="button"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+
+    </header>
+
+    <input type="checkbox" id="checkbox-menu">
+    <div id="menu">
+        <label class="menu__button" for="checkbox-menu"><i class="fas fa-angle-double-right"></i><i class="fas fa-angle-double-left"></i></label>
+        <nav>
+            <ul>
+                <li class="icon">
+                    <a href="https://facebook.com"><i class="far fa-bell"></i><span>notifications</span></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com"><i class="far fa-envelope"></i><span>message</span></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com"><i class="fas fa-shopping-cart"></i><span>shop</span></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com"><i class="fas fa-balance-scale"></i><span>balance</span></a>
+                </li>
+                <li class="icon">
+                    <a href="https://facebook.com"><i class="fas fa-cog"></i><span>settings</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu__login">
+            <img src="./multimedia/perfil1.jpg" alt="">
+            <div class="icon"><a href="https://facebook.com"><i class="fas fa-sign-out-alt"></i><span>log out</span></div></a>
+        </div>
+    </div>
+
+    <div id="center">
+        <main id="main">
+            
+            <div class="profile">
+                
+                <div class="photo-conteiner">
+                    <picture class="profile__photo">
+                        <source srcset="./multimedia/perfil1.jpg" alt="Foto de perfil del autor">
+                        <img src="https://www.facebook.com/share/p/1E9oTLbdPr/" alt="Foto de perfil del autor">
+                    </picture>
+                </div>
+                
+                <div class="profile__description">
+                    <h1>Quien es Alejandro Santos</h1>
+                    <p class="profile__description">
+                        Estudiante de 1ro de ing. en Telecomunicaciones y Electronica, con una profunda dedicacion y amor por la programacion. Ha incursionado en el mundo del desarrollo web con el objetivo convertirse en un gran "Full-stack" con React y Djando.
+                    </p>
+                    <div class="profile__skills">
+                        <label>HTML
+                            <div class="bar-out  --70">
+                                <div class="bar-in">70%</div>
+                            </div>
+                        </label>
+                        <label>CSS
+                            <div class="bar-out --85">
+                                <div class="bar-in">85%</div>
+                            </div>
+                        </label>
+                        <label>JavaScript
+                            <div class="bar-out --20">
+                                <div class="bar-in">20%</div>
+                            </div>
+                        </label>
+                        <label>Python
+                            <div class="bar-out --50">
+                                <div class="bar-in">50%</div>
+                            </div>
+                        </label>
+                        <label>Django
+                            <div class="bar-out --20">
+                                <div class="bar-in">20%</div>
+                            </div>
+                        </label>
+                        <label>SQL
+                            <div class="bar-out --80">
+                                <div class="bar-in">80%</div>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="projects-conteiner">
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 1</a></div>
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 2</a></div>
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 3</a></div>
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 4</a></div>
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 5</a></div>
+                    <div class="photo-project"><a href="https://youtube.com" class="project-link">proyect 6</a></div>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer id="footer">
+            <h2><strong>Alejandro Santos Aguilar</strong> 2026</h2>
+            
+        </footer>
+        
+    </div>
+    
+</body>
+</html>
