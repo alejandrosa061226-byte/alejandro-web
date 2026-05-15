@@ -8,6 +8,7 @@ body{
     grid-template-rows: 5rem calc(100dvh - 5rem);
     grid-template-areas: "nav nav" "aside cent";
     gap: 0;
+    overflow: hidden;
 }
 
 #bar{
